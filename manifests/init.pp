@@ -374,7 +374,8 @@ class varnish (
   $log_dir              = params_lookup( 'log_dir' ),
   $log_file             = params_lookup( 'log_file' ),
   $port                 = params_lookup( 'port' ),
-  $protocol             = params_lookup( 'protocol' )
+  $protocol             = params_lookup( 'protocol' ),
+  $daemon_params        = params_lookup( 'daemon_params' )
   ) inherits varnish::params {
 
   $bool_source_dir_purge=any2bool($source_dir_purge)
