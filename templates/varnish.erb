@@ -91,4 +91,9 @@ DAEMON_OPTS=" \
       scope.lookupvar('varnish::instance') != 'default' -%>
     -n ${INSTANCE} \
 <% end -%>
+<% if scope.lookupvar('varnish::daemon_params') != '' -%>
+  <% scope.lookupvar('varnish::daemon_params').each do |param| -%>
+    -p <%= param %> \
+  <% end -%>
+<% end -%>
 "

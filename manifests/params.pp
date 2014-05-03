@@ -104,6 +104,7 @@ class varnish::params {
   $storage_file = '/var/lib/varnish/$INSTANCE/varnish_storage.bin'
   $vcl_template = ''
   $vcl_source = ''
+  $daemon_params = ''
 
   $protocol = 'tcp'
 
